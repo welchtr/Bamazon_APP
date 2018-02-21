@@ -25,7 +25,7 @@ var productChoices = function() {
       for (var i = 0; i < res.length; i++) {
           console.log("Item ID: " + res[i].itemID + " || Product: " + res[i].productName + " || Department: " + res[i].departmentName + " || Price: " + res[i].price + " || Stock: " + res[i].quantity);
       }
-      buyingProccess();
+      buyingProccess(res);
     })
 };
 
@@ -54,7 +54,6 @@ function buyingProccess(){
 			} else {
 				console.log('There are not enough in stock for you to purchase that many.');
 				buyingProcess();
-        connection.end();
 			}
 		})
     connection.end();
